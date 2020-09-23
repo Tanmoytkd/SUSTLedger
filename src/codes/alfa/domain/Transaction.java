@@ -4,13 +4,22 @@ public class Transaction {
     private int amount;
     private Contact contact;
     private String description;
+    private  boolean moneySent;
 
-    public Transaction(int amount, Contact contact, String description) {
+    public Transaction(int amount, Contact contact, String description,boolean moneySent) {
         this.amount = amount;
         this.contact = contact;
         this.description = description;
+        this.moneySent = moneySent;
     }
 
+    public boolean isMoneySent() {
+        return moneySent;
+    }
+
+    public void setMoneySent(boolean moneySent) {
+        this.moneySent = moneySent;
+    }
 
     public int getAmount() {
         return amount;
